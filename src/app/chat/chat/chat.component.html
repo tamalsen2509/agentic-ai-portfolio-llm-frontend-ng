@@ -1,0 +1,24 @@
+<div class="chat-container">
+  <h2>AI Chat</h2>
+
+  <div class="input-row">
+    <input
+      type="text"
+      [(ngModel)]="userMessage"
+      placeholder="Ask anything..."
+      (keyup.enter)="sendMessage()"
+    />
+    <button (click)="sendMessage()" [disabled]="isLoading">
+      {{ isLoading ? 'Thinking...' : 'Send' }}
+    </button>
+  </div>
+
+  <div class="response-box" *ngIf="aiResponse">
+    <strong>GPT-4o:</strong>
+    <p>{{ aiResponse }}</p>
+  </div>
+
+  <div class="error-box" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+</div>
