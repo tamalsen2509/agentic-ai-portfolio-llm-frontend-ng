@@ -18,6 +18,11 @@
     <p>{{ aiResponse }}</p>
   </div>
 
+  <div class="thinking-box" *ngIf="isLoading">
+  Agent is thinking...
+</div>
+
+
   <div class="error-box" *ngIf="errorMessage">
     {{ errorMessage }}
   </div>

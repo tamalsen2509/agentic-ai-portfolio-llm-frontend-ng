@@ -47,3 +47,10 @@ button:disabled {
   color: #c0392b;
   font-size: 14px;
 }
+
+.thinking-box {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+}
